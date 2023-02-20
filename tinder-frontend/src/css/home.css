@@ -1,0 +1,39 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)),
+    url("../images/bg.webp");
+}
+
+.callToAction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.callToAction h1 {
+  font-size: 4.3rem;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.callToAction button {
+  background: var(--btn-primary-color);
+  align-self: center;
+  padding: 10px 40px;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.4s ease all;
+}
+
+.callToAction button:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    var(--btn-primary-hover);
+}

@@ -1,0 +1,100 @@
+.onboardingContainer {
+  padding: 50px 10vw;
+  position: relative;
+}
+.onboardingContainer form {
+  width: 500px;
+}
+.onBoardingFormField {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+
+.onBoardingFormField input,
+.onboardingContainer textarea {
+  padding: 10px 16px;
+  font-size: 1rem;
+  background-color: rgb(211, 211, 211, 0.6);
+  border: none;
+  border-radius: 5px;
+  resize: none;
+}
+.onBoardingFormField textarea {
+  height: 100px;
+}
+.onboardingContainer input[type="radio"] {
+  display: none;
+}
+
+.onboardingContainer label.active {
+  border-color: var(--primary-color);
+}
+
+.multivalued-form-field {
+  display: flex;
+  gap: 10px;
+}
+.multivalued-form-field.short input {
+  width: 80px;
+  text-align: center;
+}
+
+.multivalued-form-field label {
+  padding: 5px 16px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid silver;
+  transition: 0.3s ease all;
+}
+
+.onboardingContainer form button {
+  background: var(--btn-primary-color);
+  align-self: flex-start;
+  padding: 10px 40px;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.4s ease all;
+}
+.onboardingContainer form button:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    var(--btn-primary-hover);
+}
+
+.onboardingContainer form button:disabled {
+  background: gray;
+  border: 2px solid silver;
+  cursor: not-allowed;
+}
+
+.photoUploadSection {
+  position: absolute;
+  top: 70px;
+  right: 20vw;
+  text-align: center;
+}
+.photoUploadSection input {
+  display: none;
+}
+.photoUploadSection label {
+  color: var(--primary-color);
+  font-size: 2rem;
+  cursor: pointer;
+}
+.profilePhotoPreview {
+  height: 250px;
+  width: 200px;
+  border: 2.5px dashed var(--primary-color);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+.profilePhotoPreview label {
+  font-size: 1.2rem;
+}

@@ -1,0 +1,195 @@
+.dashboard {
+  display: flex;
+}
+.dashboard-left {
+  width: 30vw;
+  background-color: #fafafa;
+  height: 100vh;
+  border-right: 1px solid silver;
+  z-index: 999;
+}
+.dashboard-right {
+  flex: 1;
+  background-color: #eee;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.current-user-info {
+  background: var(--btn-primary-color);
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: white;
+}
+
+.current-user-info h3 {
+  background-color: rgb(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: 0.2s ease all;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.current-user-info h3:hover {
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+.current-user-info img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.current-user-info button {
+  color: white;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  transition: 0.2s ease all;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.current-user-info button:hover {
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+.chatContainer {
+  height: calc(100vh - 20vh);
+  display: flex;
+  flex-direction: column;
+}
+.chatNav {
+  display: flex;
+  padding: 10px;
+}
+.chatNav button {
+  background: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  border: 0;
+  border-bottom: 4px solid silver;
+  cursor: pointer;
+  transition: 0.2s ease all;
+  color: #333;
+}
+.chatNav button:active {
+  background-color: rgb(0, 0, 0, 0.1);
+}
+.chatNav button:disabled {
+  background: none;
+  color: black;
+  border-color: var(--primary-color);
+}
+
+.userItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: 0.2s ease all;
+}
+
+.userItem img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.userItem .matchAction {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.userItem .matchAction button {
+  background: none;
+  border-radius: 5px;
+  border: 2px solid var(--primary-color);
+  padding: 2px 5px;
+  cursor: pointer;
+  font-size: 0.7rem;
+}
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.userItem h3 {
+  font-size: 1rem;
+}
+.userItem span {
+  font-size: 0.9rem;
+}
+
+.userItem:active {
+  background-color: rgb(0, 0, 0, 0.08);
+}
+
+.swipe {
+  position: absolute;
+}
+
+.cardContainer {
+  width: 90vw;
+  max-width: 350px;
+  height: 600px;
+}
+
+.card {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.001), rgba(0, 0, 0, 0.6)),
+    url(https://images.pexels.com/photos/1642228/pexels-photo-1642228.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  width: 80vw;
+  max-width: 350px;
+  height: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+  background-size: cover;
+  background-position: center;
+}
+
+.cardContent {
+  width: 100%;
+  height: 100%;
+}
+
+.swipe:last-of-type {
+}
+
+.card .card-info {
+  position: absolute;
+  bottom: 0;
+  margin: 10px;
+  color: white;
+}
+.card-info h3 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.infoText {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  color: #fff;
+  animation-name: popup;
+  animation-duration: 800ms;
+}

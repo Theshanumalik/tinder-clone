@@ -1,0 +1,57 @@
+.navbar {
+  padding: 30px 5vw;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.logo {
+  width: 150px;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.navbar nav ul {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  list-style-type: none;
+}
+.navbar nav ul li {
+  cursor: pointer;
+  transition: 0.2s ease all;
+}
+.navbar nav ul li:hover {
+  color: var(--primary-color);
+}
+
+.nav-action {
+  font-size: 1.2rem;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-action span {
+  display: flex;
+  align-content: center;
+  gap: 5px;
+}
+.nav-action button {
+  background-color: white;
+  color: black;
+  padding: 6px 24px;
+  border-radius: 25px;
+  font-weight: 500;
+  border: 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.2s ease all;
+}
+.nav-action button:hover {
+  background-color: rgb(255, 255, 255, 0.9);
+}
