@@ -1,7 +1,21 @@
-import React from "react";
+import axios from "axios";
+import React, { useContext, useLayoutEffect, useState } from "react";
+import { AuthContext } from "../context/Auth";
 import profile from "../images/profile.jpg";
 
-export const Chats = ({ data }) => {
+export const Chats = () => {
+  const { state } = useContext(AuthContext);
+  const [data, setData] = useState([]);
+  useLayoutEffect(() => {
+    axios
+      .get("http://localhost:5000/api/matches/", {
+        headers: { token: state.user.token },
+      })
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => console.log("something went wrong", err));
+  }, []);
   return (
     <div className="chat">
       {data?.map((user) => (

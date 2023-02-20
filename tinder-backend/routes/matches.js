@@ -98,4 +98,19 @@ router.get("/", async (req, res) => {
   }
   res.json(matchUsers);
 });
+
+router.get("/requests", async (req, res) => {
+  const match = await Request.find({
+    $and: [
+      {
+        to: req.userId,
+      },
+      { isAccepted: true },
+    ],
+  })
+    .populate("from")
+    .select("-email");
+  res.json(match);
+});
+
 module.exports = router;

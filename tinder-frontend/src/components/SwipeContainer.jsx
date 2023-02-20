@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useContext, useLayoutEffect, useState } from "react";
 import TinderCard from "react-tinder-card";
-import matches from "../users";
+import { AuthContext } from "../context/Auth";
 
 const SwipeContainer = () => {
   const [lastDirection, setLastDirection] = useState();
+  const [matches, setMatches] = useState([]);
+  const { state } = useContext(AuthContext);
 
   const swiped = (direction, nameToDelete) => {
     console.log("removing: " + nameToDelete);
@@ -17,9 +20,20 @@ const SwipeContainer = () => {
   const generateBg = (url) => {
     return {
       background: `linear-gradient(rgba(0, 0, 0, 0.001), rgba(0, 0, 0, 0.6)),
-  url(${url})`,
+      url(${url})`,
     };
   };
+
+  useLayoutEffect(() => {
+    axios
+      .get("http://localhost:5000/api/matches/recommendations", {
+        headers: { token: state.user.token },
+      })
+      .then((res) => {
+        setMatches(res.data);
+      })
+      .catch((err) => console.log("something went wrong", err));
+  }, []);
   return (
     <div className="cardContainer">
       {matches.map((user) => (

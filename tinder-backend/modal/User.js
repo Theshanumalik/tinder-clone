@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema(
     gender: {
       type: String,
     },
-    email: { type: String, required: true, unique: true },
+    email: { type: String, required: true, unique: true, select: false },
     profile: { type: Array },
   },
   { timestamps: true }

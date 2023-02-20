@@ -8,7 +8,7 @@ const PORT = process.env.PORT;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors({ origin: "*" }));
-DBcon("mongodb://localhost:27017/tinder-clone");
+DBcon("mongodb://127.0.0.1:27017/tinder-clone");
 
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/profile", require("./routes/profile"));

@@ -28,7 +28,7 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
   try {
-    const user = await User.findOne({ email }).select("+password");
+    const user = await User.findOne({ email }).select("+password +email");
     if (!user) return res.status("401").json("INVALID EMAIL OR PASSWORD");
     const { password: hashPassword, ...others } = user._doc;
     const matchPassword = await bcrypt.compare(password, hashPassword);
