@@ -12,5 +12,8 @@ For Backend NODEJS and MONGODB is used.
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-##Contact Me
+## Contact Me
+
 INSTAGRAM : [http://www.instagram.com/theshanumalik]
+TWITTER : [http://www.twitter.com/theshanumalik]
+LINKEDIN : [http://www.linkedin.com/in/theshanumalik]
